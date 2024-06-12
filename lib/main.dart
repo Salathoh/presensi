@@ -3,8 +3,11 @@ import 'package:bismillah/screen/Dashboard.dart';
 import 'package:bismillah/screen/Login.dart';
 import 'package:bismillah/screen/SplashScreen.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
-void main() {
+Future<void> main() async {
+  //untuk format tanggal indonesia
+  await initializeDateFormatting('id', null);
   runApp(const MyApp());
 }
 
